@@ -1,0 +1,11 @@
+# Friendly aliases for shorter URLs.
+/eat              /food-and-drink/   301
+/eat/             /food-and-drink/   301
+/food             /food-and-drink/   301
+/food/            /food-and-drink/   301
+/things           /things-to-do/     301
+/things/          /things-to-do/     301
+/transport        /getting-around/   301
+/transport/       /getting-around/   301
+/trips            /day-trips/        301
+/trips/           /day-trips/        301
