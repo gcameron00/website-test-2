@@ -1,15 +1,148 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <title>About</title>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>About · Basel Public Transport Guide</title>
+    <meta
+      name="description"
+      content="About this site: who it's for, what it covers, what it deliberately doesn't cover, and where the information comes from."
+    />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script defer src="/assets/js/main.js"></script>
   </head>
   <body>
-    <h1>About</h1>
-    <p><a href="/">Back home</a></p>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="site-brand" href="/">
+        <img src="/assets/favicon.svg" alt="" aria-hidden="true" />
+        <span>Basel Transport Guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/modes/tram/">Trams</a>
+        <a href="/modes/bus/">Buses</a>
+        <a href="/modes/ferry/">Ferries</a>
+        <a href="/modes/train/">Trains</a>
+        <a href="/modes/bike/">Bikes</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <h1>About this site</h1>
+
+      <p>
+        This is a small, plain-English guide to the public transport options
+        in Basel, Switzerland. It exists because, while the operators each do
+        a great job for their own service, no single page lays out the
+        trade-offs between them in one place — especially for someone who
+        has just arrived in the city.
+      </p>
+
+      <h2>What this site is</h2>
+      <ul>
+        <li>
+          <strong>Mode-by-mode descriptions</strong> of trams, buses, the
+          Rhine ferries, trains and shared bikes.
+        </li>
+        <li>
+          <strong>Honest comparisons</strong> — when each mode is the right
+          choice, and when it isn't.
+        </li>
+        <li>
+          <strong>Outbound links to the official operators</strong> for
+          tickets, timetables, fares and live information.
+        </li>
+      </ul>
+
+      <h2>What this site is not</h2>
+      <ul>
+        <li>
+          <strong>Not a journey planner.</strong> Use
+          <a href="https://www.sbb.ch/" rel="noopener">SBB</a>,
+          <a href="https://www.bvb.ch/" rel="noopener">BVB</a> or your
+          favourite map app — they're vastly better at this.
+        </li>
+        <li>
+          <strong>Not a place to buy tickets.</strong> Tickets must be
+          bought from the operator (machine, app or counter).
+        </li>
+        <li>
+          <strong>Not affiliated with any operator.</strong> No money
+          changes hands; no operator has reviewed or endorsed the content.
+        </li>
+        <li>
+          <strong>Not real-time.</strong> If a tram line is suspended for
+          construction this morning, this site won't tell you. The BVB and
+          SBB apps will.
+        </li>
+      </ul>
+
+      <h2>Sources</h2>
+      <p>
+        Where specific facts (line numbers, ferry names, fare zones) appear,
+        the source of truth is always the relevant operator. The main ones:
+      </p>
+      <ul class="resource-list">
+        <li>
+          <a href="https://www.bvb.ch/" rel="noopener">BVB — Basler Verkehrs-Betriebe</a>
+          <small>City trams and buses in Basel.</small>
+        </li>
+        <li>
+          <a href="https://www.blt.ch/" rel="noopener">BLT — Baselland Transport</a>
+          <small>Trams and buses for the Basel-Landschaft canton, including the well-known cross-border tram lines.</small>
+        </li>
+        <li>
+          <a href="https://www.tnw.ch/" rel="noopener">TNW — Tarifverbund Nordwestschweiz</a>
+          <small>The shared fare network covering BVB, BLT, S-Bahn and more.</small>
+        </li>
+        <li>
+          <a href="https://www.sbb.ch/" rel="noopener">SBB CFF FFS</a>
+          <small>Swiss Federal Railways — S-Bahn and long-distance trains.</small>
+        </li>
+        <li>
+          <a href="https://www.faehri.ch/" rel="noopener">Fähri-Verein Basel</a>
+          <small>The four reaction ferries that cross the Rhine.</small>
+        </li>
+        <li>
+          <a href="https://www.publibike.ch/" rel="noopener">PubliBike</a>
+          <small>Switzerland-wide bike-share, with stations across Basel.</small>
+        </li>
+        <li>
+          <a href="https://pickebike.ch/" rel="noopener">Pick-e-Bike</a>
+          <small>Free-floating e-bike sharing in Basel.</small>
+        </li>
+      </ul>
+
+      <h2>Corrections</h2>
+      <p>
+        Found something wrong or out of date? This site is open source —
+        the repository is on GitHub and the README has the details. Pull
+        requests welcome.
+      </p>
+
+      <h2>Privacy</h2>
+      <p>
+        The site is hosted on Cloudflare Pages and serves only static
+        files. There are no cookies, no third-party scripts, and no
+        personal data collected by the site itself.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Basel Public Transport Guide — an unofficial, community-maintained
+        site. Always verify tickets and times on the official operator
+        before travelling.
+      </p>
+      <p>
+        <a href="/">Home</a> · &copy;
+        <span data-current-year>2026</span>
+      </p>
+    </footer>
   </body>
 </html>

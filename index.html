@@ -1,17 +1,200 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <title>Home</title>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>Basel Public Transport Guide</title>
+    <meta
+      name="description"
+      content="An unofficial, plain-English guide to getting around Basel by tram, bus, ferry, train and shared bike — with links to all the official operators."
+    />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
     <script defer src="/assets/js/main.js"></script>
   </head>
   <body>
-    <h1>It works 🎉</h1>
-    <p>This site is deployed using Cloudflare Pages.</p>
-    <p><a href="/about/">About</a></p>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <a class="site-brand" href="/">
+        <img src="/assets/favicon.svg" alt="" aria-hidden="true" />
+        <span>Basel Transport Guide</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/modes/tram/">Trams</a>
+        <a href="/modes/bus/">Buses</a>
+        <a href="/modes/ferry/">Ferries</a>
+        <a href="/modes/train/">Trains</a>
+        <a href="/modes/bike/">Bikes</a>
+        <a href="/about/">About</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <h1>Getting around Basel</h1>
+        <p class="lead">
+          Basel has one of the densest public transport networks in Europe for
+          a city its size. Almost everywhere in town is reachable by tram or
+          bus in under 20 minutes, the four Rhine ferries are powered by the
+          river itself, and the SBB station is a 90-second walk from a tram
+          that goes anywhere. This guide explains what each mode is good for
+          — and points you to the official operators for tickets and
+          timetables.
+        </p>
+      </section>
+
+      <h2>Pick a mode</h2>
+      <ul class="mode-grid">
+        <li class="mode-card" data-mode="tram">
+          <span class="mode-icon" aria-hidden="true">🚊</span>
+          <h3><a href="/modes/tram/">Trams</a></h3>
+          <p>
+            The backbone of the network. Frequent, electric, and they go
+            almost everywhere a visitor wants to be. Operated by BVB and BLT.
+          </p>
+          <span class="read-more">Tram details →</span>
+        </li>
+        <li class="mode-card" data-mode="bus">
+          <span class="mode-icon" aria-hidden="true">🚌</span>
+          <h3><a href="/modes/bus/">Buses</a></h3>
+          <p>
+            Fills the gaps the tram network can't reach — hills, suburbs and
+            cross-border runs into Germany and France. Same TNW ticket as the
+            tram.
+          </p>
+          <span class="read-more">Bus details →</span>
+        </li>
+        <li class="mode-card" data-mode="ferry">
+          <span class="mode-icon" aria-hidden="true">⛴️</span>
+          <h3><a href="/modes/ferry/">Rhine ferries</a></h3>
+          <p>
+            Four small reaction ferries crossing the Rhine using only the
+            river's current. Slow, charming, and unbeatable on a sunny
+            afternoon.
+          </p>
+          <span class="read-more">Ferry details →</span>
+        </li>
+        <li class="mode-card" data-mode="train">
+          <span class="mode-icon" aria-hidden="true">🚆</span>
+          <h3><a href="/modes/train/">Trains</a></h3>
+          <p>
+            S-Bahn for the region, plus long-distance to Zürich, Bern, Paris,
+            Frankfurt and beyond. Three stations: SBB, Badischer Bahnhof and
+            Saint-Louis (FR).
+          </p>
+          <span class="read-more">Train details →</span>
+        </li>
+        <li class="mode-card" data-mode="bike">
+          <span class="mode-icon" aria-hidden="true">🚲</span>
+          <h3><a href="/modes/bike/">Bikes</a></h3>
+          <p>
+            Basel is flat and bike-friendly. PubliBike for pedal bikes,
+            Pick-e-Bike for e-bikes, Rent-a-Bike at SBB stations for longer
+            tours.
+          </p>
+          <span class="read-more">Bike details →</span>
+        </li>
+      </ul>
+
+      <h2>At a glance</h2>
+      <p>
+        A rough comparison of the five modes. Speed and cost are typical for
+        a short in-city trip; check the operator for current fares.
+      </p>
+      <div class="compare-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th scope="col">Mode</th>
+              <th scope="col">Best for</th>
+              <th scope="col">Coverage</th>
+              <th scope="col">Speed in city</th>
+              <th scope="col">Ticket</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Tram</th>
+              <td>Everyday city trips</td>
+              <td>City + inner suburbs</td>
+              <td>Medium</td>
+              <td>TNW</td>
+            </tr>
+            <tr>
+              <th scope="row">Bus</th>
+              <td>Hills, suburbs, cross-border</td>
+              <td>Wider than the tram</td>
+              <td>Medium</td>
+              <td>TNW</td>
+            </tr>
+            <tr>
+              <th scope="row">Ferry</th>
+              <td>Crossing the Rhine for fun</td>
+              <td>4 fixed crossings</td>
+              <td>Slow</td>
+              <td>Cash on board</td>
+            </tr>
+            <tr>
+              <th scope="row">Train</th>
+              <td>Out-of-town and intercity</td>
+              <td>Region, Switzerland, EU</td>
+              <td>Fast</td>
+              <td>SBB / TNW for S-Bahn in zones</td>
+            </tr>
+            <tr>
+              <th scope="row">Bike</th>
+              <td>Flexible, scenic, short trips</td>
+              <td>Wherever you can pedal</td>
+              <td>Fast for &lt;3 km</td>
+              <td>App subscription</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout">
+        <strong>One ticket for tram, bus and S-Bahn</strong>
+        Most public transport in and around Basel is covered by the
+        <a href="https://www.tnw.ch/" rel="noopener">TNW fare network</a>.
+        A single TNW ticket is valid on BVB and BLT trams and buses, on
+        Postauto, and on S-Bahn trains within the right zones — even when
+        you switch operators mid-trip.
+      </div>
+
+      <h2>If you only read one thing</h2>
+      <ul>
+        <li>
+          Staying in a hotel? Ask for your
+          <strong>BaselCard</strong> at check-in — it gives you free
+          public transport within the city for the duration of your stay.
+        </li>
+        <li>
+          Visiting for the day? A
+          <strong>TNW day pass</strong> for zones 10/11 covers virtually
+          everything you'll want to ride in the city.
+        </li>
+        <li>
+          Don't fight the apps. <strong>SBB Mobile</strong> handles trains
+          and most journey planning;
+          <strong>BVB</strong> and <strong>BLT</strong> have their own apps
+          for tram/bus tickets and live departures.
+        </li>
+      </ul>
+    </main>
+
+    <footer class="site-footer">
+      <p>
+        Basel Public Transport Guide — an unofficial, community-maintained
+        site. Always verify tickets and times on the official operator
+        before travelling.
+      </p>
+      <p>
+        <a href="/about/">About</a> · &copy;
+        <span data-current-year>2026</span>
+      </p>
+    </footer>
   </body>
 </html>
