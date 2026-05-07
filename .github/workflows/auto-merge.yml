@@ -1,19 +1,45 @@
 name: Auto-merge Claude PRs
 
 on:
-  pull_request:
-    types: [opened]
+  push:
+    branches:
+      - 'claude/**'
 
 jobs:
   auto-merge:
-    if: startsWith(github.head_ref, 'claude/')
     runs-on: ubuntu-latest
     permissions:
       contents: write
       pull-requests: write
     steps:
-      - name: Merge PR
-        run: gh pr merge --merge "${{ github.event.pull_request.number }}"
+      - name: Wait for Claude's draft PR then merge
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          # Poll for the draft PR — Claude creates it shortly after pushing
+          PR_NUMBER=""
+          for i in $(seq 1 12); do
+            PR_NUMBER=$(gh pr list --head "$BRANCH" --json number --jq '.[0].number')
+            if [ -n "$PR_NUMBER" ]; then
+              echo "Found PR #$PR_NUMBER"
+              break
+            fi
+            echo "Waiting for PR... attempt $i"
+            sleep 5
+          done
+
+          if [ -z "$PR_NUMBER" ]; then
+            echo "No PR found for branch $BRANCH after 60s — exiting"
+            exit 1
+          fi
+
+          # Convert draft to ready if needed
+          IS_DRAFT=$(gh pr view "$PR_NUMBER" --json isDraft --jq '.isDraft')
+          if [ "$IS_DRAFT" = "true" ]; then
+            echo "Marking PR #$PR_NUMBER as ready"
+            gh pr ready "$PR_NUMBER"
+          fi
+
+          gh pr merge "$PR_NUMBER" --merge --delete-branch
