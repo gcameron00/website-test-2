@@ -1,15 +1,115 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <title>About</title>
-    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <title>About — Basel Public Transport Guide</title>
+    <meta name="description" content="What this site is, what it isn't, who it's for, and how to contribute corrections." />
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script defer src="/assets/js/main.js"></script>
   </head>
   <body>
-    <h1>About</h1>
-    <p><a href="/">Back home</a></p>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M6 16 L13 23 L26 9" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>Basel Transport</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        <nav id="primary-nav" class="site-nav" aria-label="Primary">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/trams/">Trams</a></li>
+            <li><a href="/buses/">Buses</a></li>
+            <li><a href="/ferries/">Ferries</a></li>
+            <li><a href="/trains/">Trains</a></li>
+            <li><a href="/bikes/">Bikes</a></li>
+            <li><a href="/resources/">Resources</a></li>
+            <li><a href="/about/" aria-current="page">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="page-header">
+        <div class="container">
+          <span class="eyebrow">About</span>
+          <h1>About this site</h1>
+          <p class="lead">
+            A short, plain-language guide to public transport in Basel,
+            Switzerland — the kind of overview a friendly local would give you
+            on day one.
+          </p>
+        </div>
+      </header>
+
+      <section>
+        <div class="container prose">
+          <h2>What this is</h2>
+          <p>
+            An independent, framework-free static site that explains the modes
+            of public transport available in Basel and points to the official
+            apps and websites that you'll actually use to plan and pay for
+            journeys.
+          </p>
+
+          <h2>What this isn't</h2>
+          <ul>
+            <li>A live timetable. The operators do that better.</li>
+            <li>A ticket vendor. We send you to the official channels.</li>
+            <li>A trip planner or routing service.</li>
+            <li>An official voice for any operator.</li>
+          </ul>
+
+          <h2>Why bother?</h2>
+          <p>
+            Visitors and newcomers often arrive in Basel and try to piece the
+            picture together from a dozen tabs: BVB, BLT, SBB, TNW, faehri.ch,
+            the Mobility Ticket, the airport bus, PubliBike, the night network…
+            Each source is excellent at its own corner of the puzzle, but
+            nobody puts them next to each other in a single, neutral overview.
+            That's the gap this site tries to fill.
+          </p>
+
+          <h2>How it's built</h2>
+          <p>
+            Plain HTML, CSS and a small amount of vanilla JavaScript. No
+            framework, no build step, no tracking. Hosted on Cloudflare Pages.
+            The repository <em>is</em> the site — anyone can read the source,
+            propose a change, or fork it.
+          </p>
+
+          <h2>Corrections and contributions</h2>
+          <p>
+            Did a fare change? An operator merge? A link rot? Open a pull
+            request against the relevant page on GitHub. Please keep edits
+            factual and link to an official source.
+          </p>
+
+          <h2>Disclaimers</h2>
+          <ul>
+            <li>This site is not affiliated with BVB, BLT, SBB, TNW, PubliBike, Donkey Republic or any other operator.</li>
+            <li>Operator names, logos and route numbers belong to their respective owners.</li>
+            <li>Information is provided in good faith but without warranty. Always check the official source before travelling.</li>
+          </ul>
+
+          <p><a href="/">← Back home</a></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Independent guide. Not affiliated with BVB, BLT, SBB or any operator.</p>
+        <p><a href="/about/">About this site</a></p>
+      </div>
+    </footer>
   </body>
 </html>
